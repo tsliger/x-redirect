@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Content } from "./Content";
+import { App } from "./components/App";
+import "./index.css";
 
 const baseWidth = 200;
 const paddingAmount = 10;
@@ -14,7 +15,7 @@ export function Popup() {
         textAlign: "center",
       }}
     >
-      <Content />
+      <App />
     </div>
   );
 }

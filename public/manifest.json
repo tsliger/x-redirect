@@ -3,13 +3,13 @@
   "name": "X Redirect",
   "version": "1.0.0",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_title": "Open X-Redirect Settings"
   },
   "content_scripts": [
     {
-      "matches": ["https://twitter.com/*", "https://x.com/*"],
-      "js": ["content.js"]
+      "matches": ["https://twitter.com/*", "https://x.com/*"]
+      // "js": ["index.js"]
     }
   ]
 }

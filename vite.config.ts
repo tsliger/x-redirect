@@ -1,14 +1,17 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  plugins: [react(), tailwindcss()],
   build: {
     minify: false,
-    plugins: [react()],
+    outDir: "dist",
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        popup: resolve(__dirname, "src/popup.tsx"),
+        popup: resolve(__dirname, "index.html"),
       },
       output: {
         entryFileNames: "[name].js",
@@ -17,7 +20,5 @@ export default defineConfig({
       },
     },
   },
-  outDir: "dist",
-  emptyOutDir: true,
   publicDir: "public",
 });
