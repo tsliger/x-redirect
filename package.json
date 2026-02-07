@@ -1,0 +1,22 @@
+{
+  "name": "x-redirect",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@3c1u/bun-run-all": "^0.1.2",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/firefox-webext-browser": "^143.0.0",
+    "vite": "^7.3.1",
+    "web-ext": "^9.2.0"
+  },
+  "scripts": {
+    "run-firefox": "web-ext run --source-dir dist --firefox=deved",
+    "dev": "run-s build && run-p watch run-firefox"
+  }
+}
