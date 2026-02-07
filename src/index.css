@@ -2,9 +2,18 @@
 
 @theme {
     --primary-color: #f7f7e6;
+    --secondary-color: lightblue;
     --text-color: black;
 }
 
 body {
-    @apply bg-[var(--primary-color)] text-[var(--text-color)] w-96 m-3 font-mono;
+    @apply bg-[var(--primary-color)] text-[var(--text-color)]  m-4 font-mono;
+}
+
+.dropdown {
+    @apply text-sm border-2 bg-white  hover:border-[var(--secondary-color)] border-black/10 p-2 mt-2 transition transition-all rounded-lg hover:cursor-pointer;
+}
+
+.dropdown > option {
+    @apply w-full p-2 border border-slate-700 rounded mb-4;
 }

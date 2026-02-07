@@ -6,13 +6,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    minify: false,
+    minify: true,
     outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {
         popup: resolve(__dirname, "index.html"),
-        background: resolve(__dirname, "src/redirectService.ts"),
+        redirectService: resolve(__dirname, "src/services/redirectService.ts"),
       },
       output: {
         entryFileNames: "[name].js",

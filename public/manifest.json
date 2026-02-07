@@ -1,29 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "X Redirect",
+  "name": "X-Redirect",
   "version": "1.0.0",
-  "permissions": ["declarativeNetRequest"],
-  "host_permissions": [
-    "*://x.com/*",
-    "*://*.x.com/*",
-    "*://twitter.com/*",
-    "*://*.twitter.com/*",
-    "*://xcancel.com/*"
-  ],
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_1",
-        "enabled": true,
-        "path": "rules.json"
-      }
-    ]
-  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["*://twitter.com/*", "*://x.com/*"],
   "action": {
-    "default_popup": "index.html",
-    "default_title": "Open X-Redirect Settings"
+    "default_popup": "index.html"
   },
   "background": {
-    "scripts": ["src/services/redirectService.ts"]
+    "scripts": ["redirectService.js"]
   }
 }
