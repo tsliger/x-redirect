@@ -7,8 +7,11 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "x-redirect@sliger.dev",
-      "strict_min_version": "109.0"
+      "id": "x-redirect-v1@sliger.dev",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "permissions": ["storage", "tabs"],
