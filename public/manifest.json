@@ -2,12 +2,22 @@
   "manifest_version": 3,
   "name": "X-Redirect",
   "version": "1.0.0",
+  "developer": {
+    "name": "Tom Sliger"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "x-redirect@sliger.dev",
+      "strict_min_version": "109.0"
+    }
+  },
   "permissions": ["storage", "tabs"],
   "host_permissions": ["*://twitter.com/*", "*://x.com/*"],
   "action": {
     "default_popup": "index.html"
   },
   "background": {
-    "scripts": ["redirectService.js"]
+    "scripts": ["redirectService.js"],
+    "type": "module"
   }
 }
