@@ -2,16 +2,14 @@
   "manifest_version": 3,
   "name": "X Redirect",
   "version": "1.0.0",
-  "description": "Redirects X/Twitter links automatically.",
-  "permissions": ["tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open X-Redirect Settings"
+  },
   "content_scripts": [
     {
       "matches": ["https://twitter.com/*", "https://x.com/*"],
       "js": ["content.js"]
     }
-  ],
-  "icons": {
-    "48": "icon-48.png",
-    "128": "icon-128.png"
-  }
+  ]
 }

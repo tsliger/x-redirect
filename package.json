@@ -5,17 +5,24 @@
   "private": true,
   "devDependencies": {
     "@3c1u/bun-run-all": "^0.1.2",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.3"
   },
   "peerDependencies": {
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "@types/firefox-webext-browser": "^143.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "vite": "^7.3.1",
     "web-ext": "^9.2.0"
   },
   "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
     "run-firefox": "web-ext run --source-dir dist --firefox=deved",
     "dev": "run-s build && run-p watch run-firefox"
   }
