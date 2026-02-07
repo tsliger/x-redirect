@@ -2,14 +2,28 @@
   "manifest_version": 3,
   "name": "X Redirect",
   "version": "1.0.0",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": [
+    "*://x.com/*",
+    "*://*.x.com/*",
+    "*://twitter.com/*",
+    "*://*.twitter.com/*",
+    "*://xcancel.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "action": {
     "default_popup": "index.html",
     "default_title": "Open X-Redirect Settings"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://twitter.com/*", "https://x.com/*"]
-      // "js": ["index.js"]
-    }
-  ]
+  "background": {
+    "scripts": ["src/services/redirectService.ts"]
+  }
 }

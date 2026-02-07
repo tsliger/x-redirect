@@ -1,23 +1,10 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "./components/App";
+import { App } from "./App";
 import "./index.css";
 
-const baseWidth = 200;
-const paddingAmount = 10;
-
 export function Popup() {
-  return (
-    <div
-      style={{
-        width: `${baseWidth}px`,
-        padding: `${paddingAmount}px`,
-        textAlign: "center",
-      }}
-    >
-      <App />
-    </div>
-  );
+  return <App />;
 }
 
 const root = createRoot(document.getElementById("root")!);

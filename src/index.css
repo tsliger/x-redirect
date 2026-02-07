@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-    --color-brand: #3b82f6;
+    --primary-color: #f7f7e6;
+    --text-color: black;
+}
+
+body {
+    @apply bg-[var(--primary-color)] text-[var(--text-color)] w-96 m-3 font-mono;
 }
