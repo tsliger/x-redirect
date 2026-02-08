@@ -1,8 +1,8 @@
 # X-Redirect
 
 <p align="center">
-    <img src="images/x-redirect-logo.png" width="150" />
-    <img src="images/popup.png" width="150" />
+    <img src="images/x-redirect-logo.png" height="200" />
+    <img src="images/popup.png" height="200" />
 </p>
 
 A lightweight Firefox extension built with React and Vite that automatically redirects X (formerly Twitter) URLs to a custom destination like xcancel.com.
