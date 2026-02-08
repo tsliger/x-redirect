@@ -11,7 +11,7 @@ body {
 }
 
 .dropdown {
-    @apply text-sm border-2 bg-white  hover:border-[var(--secondary-color)] border-black/10 p-2 mt-2 transition transition-all rounded-lg hover:cursor-pointer;
+    @apply text-xs border-2 bg-white  hover:border-[var(--secondary-color)] border-black/10 p-2 mt-2 transition transition-all rounded-lg hover:cursor-pointer;
 }
 
 .dropdown > option {
